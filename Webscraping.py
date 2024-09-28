@@ -157,12 +157,12 @@ send_email(word_of_the_day)
 from twilio.rest import Client
 
 # Replace these with your actual Twilio credentials
-account_sid = 'ACe0513e604e5c2e3e7af87582486a1253'
+account_sid = 'ACe0513e604e5c2e3e7af87582486a1253' #good practice to not incldue this#
 auth_token = 'ecc19521ddac85ffc83a139b576f5df0'
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-    from_='18444590221',  # Your Twilio number
+    from_='+18444590221',  # Your Twilio number
     body="Le mot du jour d'aujourd'hui est : [Merci!] Réfléchissez à la manière dont vous pouvez appliquer ce nouvel outil.",
     to='12155013351'  # Recipient's phone number
 )
