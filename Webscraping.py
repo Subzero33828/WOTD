@@ -43,7 +43,7 @@ else:
 # Step 3: Parse the HTML Using BeautifulSoup
 # Once the page is fetched, we can parse it to find the list of French words.
 
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup# useless :(
 
 # Parse the content of the page
 soup = BeautifulSoup(response.content, 'html.parser')
