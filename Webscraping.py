@@ -31,7 +31,7 @@ with open('home.html', 'r') as html_file:
     
 import requests
 
-url = 'https://example.com/french-words'  # Replace with the actual URL
+url = 'https://www.linguasorb.com/french/verbs/most-common-verbs/1'  
 response = requests.get(url)
 
 # Check if the request was successful
@@ -66,7 +66,7 @@ from datetime import date
 def get_word_of_the_day(words):
     # Get the current day as an integer (e.g., day 1, 2, etc.)
     today = date.today().day
-    return words[today % len(words)]  # Modulus to cycle through words
+    return words[today % len(words)]  # Modulus to cycle through words based on the day
 
 # Get the word of the day
 word_of_the_day = get_word_of_the_day(french_words)
